@@ -21,7 +21,7 @@
     {
       "id": 2,
       "nom": "Burger végétarien",
-      "prix": 15.0,
+      "prix": 15,
       "allergenes": ["gluten", "soja"],
       "src": "./src/FoodPic/2.png",
       "ingredients": [
@@ -39,7 +39,7 @@
     {
       "id": 3,
       "nom": "Poke bowl au saumon",
-      "prix": 18.0,
+      "prix": 18,
       "allergenes": ["poisson", "soja", "sésame"],
       "src": "./src/FoodPic/3.png",
       "ingredients": [
@@ -57,7 +57,7 @@
     {
       "id": 4,
       "nom": "Steak frites",
-      "prix": 20.0,
+      "prix": 20,
       "allergenes": ["gluten"],
       "src": "./src/FoodPic/4.png",
       "ingredients": [
@@ -74,7 +74,7 @@
     {
       "id": 5,
       "nom": "Wrap falafel",
-      "prix": 12.0,
+      "prix": 12,
       "allergenes": ["gluten", "soja"],
       "src": "./src/FoodPic/5.png",
       "ingredients": [
@@ -92,7 +92,7 @@
     {
       "id": 6,
       "nom": "Curry végétarien",
-      "prix": 16.0,
+      "prix": 16,
       "allergenes": ["lait"],
       "src": "./src/FoodPic/6.png",
       "ingredients": [
@@ -109,7 +109,7 @@
     {
       "id": 7,
       "nom": "Fish and chips",
-      "prix": 18.0,
+      "prix": 18,
       "allergenes": ["gluten", "poisson"],
       "src": "./src/FoodPic/7.png",
       "ingredients": [
@@ -142,7 +142,7 @@
     {
       "id": 9,
       "nom": "Salade de quinoa et poulet grillé",
-      "prix": 14.0,
+      "prix": 14,
       "allergenes": ["gluten"],
       "src": "./src/FoodPic/9.png",
       "ingredients": [
@@ -160,7 +160,7 @@
     {
       "id": 10,
       "nom": "Raviolis végétariens",
-      "prix": 17.0,
+      "prix": 17,
       "allergenes": ["gluten", "œuf"],
       "src": "./src/FoodPic/10.png",
       "ingredients": [
@@ -176,7 +176,7 @@
     {
       "id": 11,
       "nom": "Saumon grillé",
-      "prix": 22.0,
+      "prix": 22,
       "allergenes": ["poisson"],
       "src": "./src/FoodPic/11.png",
       "ingredients": [
@@ -191,7 +191,7 @@
     {
       "id": 12,
       "nom": "Bavette grillée",
-      "prix": 24.0,
+      "prix": 24,
       "allergenes": ["aucun"],
       "src": "./src/FoodPic/12.png",
       "ingredients": [
@@ -206,7 +206,7 @@
     {
       "id": 13,
       "nom": "Tofu sauté aux légumes",
-      "prix": 15.0,
+      "prix": 15,
       "allergenes": ["soja"],
       "src": "./src/FoodPic/13.png",
       "ingredients": [
@@ -223,7 +223,7 @@
     {
       "id": 14,
       "nom": "Curry de légumes",
-      "prix": 16.0,
+      "prix": 16,
       "allergenes": ["aucun"],
       "src": "./src/FoodPic/14.png",
       "ingredients": [
@@ -239,7 +239,7 @@
     {
       "id": 15,
       "nom": "Poulet tandoori",
-      "prix": 18.0,
+      "prix": 18,
       "allergenes": ["lactose"],
       "src": "./src/FoodPic/15.png",
       "ingredients": [
@@ -255,7 +255,7 @@
     {
       "id": 16,
       "nom": "Poisson grillé au citron",
-      "prix": 21.0,
+      "prix": 21,
       "allergenes": ["poisson"],
       "src": "./src/FoodPic/16.png",
       "ingredients": [
@@ -268,11 +268,10 @@
       "categorie": "poisson",
       "menu": "plats"
     },
-
     {
       "id": 18,
       "nom": "Assiette de charcuterie",
-      "prix": 20.0,
+      "prix": 20,
       "allergenes": ["aucun"],
       "src": "./src/FoodPic/18.png",
       "ingredients": [
@@ -288,7 +287,7 @@
     {
       "id": 19,
       "nom": "Salade niçoise",
-      "prix": 16.0,
+      "prix": 16,
       "allergenes": ["poisson", "œuf"],
       "src": "./src/FoodPic/19.png",
       "ingredients": [
@@ -306,7 +305,7 @@
     {
       "id": 20,
       "nom": "Tartare de bœuf",
-      "prix": 22.0,
+      "prix": 22,
       "allergenes": ["moutarde"],
       "src": "./src/FoodPic/20.png",
       "ingredients": [
@@ -324,7 +323,7 @@
     {
       "id": 21,
       "nom": "Raviolis aux crevettes",
-      "prix": 19.0,
+      "prix": 19,
       "allergenes": ["gluten", "fruits de mer"],
       "src": "./src/FoodPic/21.png",
       "ingredients": [
@@ -339,7 +338,7 @@
     {
       "id": 22,
       "nom": "Ragoût de légumes",
-      "prix": 15.0,
+      "prix": 15,
       "allergenes": ["aucun"],
       "src": "./src/FoodPic/22.png",
       "ingredients": [
@@ -352,11 +351,10 @@
       "categorie": "végétarien",
       "menu": "plats"
     },
-
     {
       "id": 24,
       "nom": "Hamburger végétarien",
-      "prix": 14.0,
+      "prix": 14,
       "allergenes": ["gluten", "soja"],
       "src": "./src/FoodPic/24.png",
       "ingredients": [
@@ -373,7 +371,7 @@
     {
       "id": 25,
       "nom": "Côte de porc grillée",
-      "prix": 19.0,
+      "prix": 19,
       "allergenes": ["aucun"],
       "src": "./src/FoodPic/25.png",
       "ingredients": [
@@ -388,7 +386,7 @@
     {
       "id": 26,
       "nom": "Pâtes aux champignons",
-      "prix": 17.0,
+      "prix": 17,
       "allergenes": ["gluten"],
       "src": "./src/FoodPic/26.png",
       "ingredients": [
@@ -403,7 +401,7 @@
     {
       "id": 27,
       "nom": "Tacos au poulet",
-      "prix": 16.0,
+      "prix": 16,
       "allergenes": ["gluten"],
       "src": "./src/FoodPic/27.png",
       "ingredients": [
@@ -418,7 +416,7 @@
     {
       "id": 28,
       "nom": "Couscous au poulet",
-      "prix": 18.0,
+      "prix": 18,
       "allergenes": ["aucun"],
       "src": "./src/FoodPic/28.png",
       "ingredients": [
@@ -431,11 +429,10 @@
       "categorie": "viande",
       "menu": "plats"
     },
-
     {
       "id": 30,
       "nom": "Poisson frit",
-      "prix": 20.0,
+      "prix": 20,
       "allergenes": ["poisson", "gluten"],
       "src": "./src/FoodPic/30.png",
       "ingredients": [
@@ -450,7 +447,7 @@
     {
       "id": 31,
       "nom": "Burger de saumon",
-      "prix": 18.0,
+      "prix": 18,
       "allergenes": ["poisson", "gluten"],
       "src": "./src/FoodPic/31.png",
       "ingredients": [
@@ -468,7 +465,7 @@
     {
       "id": 32,
       "nom": "Steak végétarien aux haricots noirs",
-      "prix": 16.0,
+      "prix": 16,
       "allergenes": ["gluten"],
       "src": "./src/FoodPic/32.png",
       "ingredients": [
@@ -485,7 +482,7 @@
     {
       "id": 33,
       "nom": "Salade César au poulet",
-      "prix": 14.0,
+      "prix": 14,
       "allergenes": ["œuf", "gluten"],
       "src": "./src/FoodPic/33.png",
       "ingredients": [
@@ -502,7 +499,7 @@
     {
       "id": 34,
       "nom": "Risotto aux champignons",
-      "prix": 18.0,
+      "prix": 18,
       "allergenes": ["lait"],
       "src": "./src/FoodPic/34.png",
       "ingredients": [
@@ -518,7 +515,7 @@
     {
       "id": 35,
       "nom": "Filet mignon grillé",
-      "prix": 25.0,
+      "prix": 25,
       "allergenes": ["aucun"],
       "src": "./src/FoodPic/35.png",
       "ingredients": [
@@ -533,7 +530,7 @@
     {
       "id": 36,
       "nom": "Wrap au tempeh",
-      "prix": 12.0,
+      "prix": 12,
       "allergenes": ["gluten", "soja"],
       "src": "./src/FoodPic/36.png",
       "ingredients": [
@@ -550,7 +547,7 @@
     {
       "id": 37,
       "nom": "Crevettes sautées aux légumes",
-      "prix": 22.0,
+      "prix": 22,
       "allergenes": ["crustacés"],
       "src": "./src/FoodPic/37.png",
       "ingredients": [
@@ -565,7 +562,7 @@
     {
       "id": 38,
       "nom": "Pizza Margherita",
-      "prix": 14.0,
+      "prix": 14,
       "allergenes": ["gluten", "lait"],
       "src": "./src/FoodPic/38.png",
       "ingredients": [
@@ -580,7 +577,7 @@
     {
       "id": 39,
       "nom": "Poulet rôti aux herbes",
-      "prix": 20.0,
+      "prix": 20,
       "allergenes": ["aucun"],
       "src": "./src/FoodPic/39.png",
       "ingredients": [
@@ -595,7 +592,7 @@
     {
       "id": 40,
       "nom": "Poke bowl végétarien",
-      "prix": 15.0,
+      "prix": 15,
       "allergenes": ["soja"],
       "src": "./src/FoodPic/40.png",
       "ingredients": [
@@ -610,11 +607,10 @@
       "categorie": "végétarien",
       "menu": "plats"
     },
-
     {
       "id": 42,
       "nom": "Côtelette d'agneau grillée",
-      "prix": 24.0,
+      "prix": 24,
       "allergenes": ["aucun"],
       "src": "./src/FoodPic/42.png",
       "ingredients": [
@@ -626,11 +622,10 @@
       "categorie": "viande",
       "menu": "plats"
     },
-
     {
       "id": 44,
       "nom": "Brochettes de crevettes grillées",
-      "prix": 21.0,
+      "prix": 21,
       "allergenes": ["crustacés"],
       "src": "./src/FoodPic/44.png",
       "ingredients": [
@@ -643,11 +638,10 @@
       "categorie": "poisson",
       "menu": "plats"
     },
-
     {
       "id": 47,
       "nom": "Ragoût de bœuf",
-      "prix": 19.0,
+      "prix": 19,
       "allergenes": ["aucun"],
       "src": "./src/FoodPic/47.png",
       "ingredients": [
@@ -663,7 +657,7 @@
     {
       "id": 48,
       "nom": "Wrap aux légumes grillés",
-      "prix": 13.0,
+      "prix": 13,
       "allergenes": ["gluten"],
       "src": "./src/FoodPic/48.png",
       "ingredients": [
@@ -680,7 +674,7 @@
     {
       "id": 49,
       "nom": "Poulet Tikka Masala",
-      "prix": 21.0,
+      "prix": 21,
       "allergenes": ["lait"],
       "src": "./src/FoodPic/49.png",
       "ingredients": [
@@ -693,11 +687,10 @@
       "categorie": "viande",
       "menu": "plats"
     },
-
     {
       "id": 51,
       "nom": "Soupe à l'oignon",
-      "prix": 8.0,
+      "prix": 8,
       "allergenes": ["lactose", "gluten"],
       "src": "./src/FoodPic/51.png",
       "ingredients": [
@@ -712,7 +705,7 @@
     {
       "id": 52,
       "nom": "Carpaccio de betteraves",
-      "prix": 11.0,
+      "prix": 11,
       "allergenes": ["aucun"],
       "src": "./src/FoodPic/52.png",
       "ingredients": [
@@ -726,7 +719,7 @@
     {
       "id": 53,
       "nom": "Tartare de saumon",
-      "prix": 15.0,
+      "prix": 15,
       "allergenes": ["poisson", "moutarde"],
       "src": "./src/FoodPic/53.png",
       "ingredients": [
@@ -742,7 +735,7 @@
     {
       "id": 54,
       "nom": "Rouleaux de printemps aux légumes",
-      "prix": 10.0,
+      "prix": 10,
       "allergenes": ["aucun"],
       "src": "./src/FoodPic/54.png",
       "ingredients": [
@@ -760,18 +753,17 @@
     {
       "id": 55,
       "nom": "Calamars frits",
-      "prix": 14.0,
+      "prix": 14,
       "allergenes": ["gluten", "fruits de mer"],
       "src": "./src/FoodPic/55.png",
       "ingredients": ["calamars frits", "sauce aïoli"],
       "categorie": "poisson",
       "menu": "entrée"
     },
-
     {
       "id": 57,
       "nom": "Velouté de potiron",
-      "prix": 9.0,
+      "prix": 9,
       "allergenes": ["lactose"],
       "src": "./src/FoodPic/57.png",
       "ingredients": [
@@ -786,7 +778,7 @@
     {
       "id": 58,
       "nom": "Tarte aux pommes",
-      "prix": 6.0,
+      "prix": 6,
       "allergenes": ["gluten", "lait", "oeuf"],
       "src": "./src/FoodPic/58.png",
       "ingredients": ["pâte brisée", "pommes", "sucre", "cannelle", "beurre"],
@@ -796,7 +788,7 @@
     {
       "id": 59,
       "nom": "Crème brûlée",
-      "prix": 7.0,
+      "prix": 7,
       "allergenes": ["lait", "oeuf"],
       "src": "./src/FoodPic/59.png",
       "ingredients": ["crème", "sucre", "jaune d'oeuf", "extrait de vanille"],
@@ -823,7 +815,7 @@
     {
       "id": 61,
       "nom": "Tiramisu",
-      "prix": 8.0,
+      "prix": 8,
       "allergenes": ["gluten", "lait", "oeuf"],
       "src": "./src/FoodPic/61.png",
       "ingredients": [
@@ -854,7 +846,7 @@
     {
       "id": 63,
       "nom": "Salade de fruits frais",
-      "prix": 6.0,
+      "prix": 6,
       "allergenes": ["aucun"],
       "src": "./src/FoodPic/63.png",
       "ingredients": ["fraises", "ananas", "mangue", "kiwi", "menthe"],
@@ -864,7 +856,7 @@
     {
       "id": 64,
       "nom": "Crème glacée à la vanille",
-      "prix": 5.0,
+      "prix": 5,
       "allergenes": ["lait"],
       "src": "./src/FoodPic/64.png",
       "ingredients": ["lait", "crème", "sucre", "extrait de vanille"],
@@ -874,38 +866,38 @@
     {
       "id": 65,
       "nom": "Café",
-      "prix": 3.0,
+      "prix": 3,
       "allergenes": ["aucun"],
       "src": "./src/FoodPic/65.png",
       "ingredients": ["café"],
-      "categorie": "chaude"
+      "categorie": "boisson"
     },
     {
       "id": 66,
       "nom": "Thé glacé",
-      "prix": 4.0,
+      "prix": 4,
       "allergenes": ["aucun"],
       "src": "./src/FoodPic/66.png",
       "ingredients": ["thé", "sucre", "citron", "eau"],
-      "categorie": "froide"
+      "categorie": "boisson"
     },
     {
       "id": 67,
       "nom": "Jus d'orange frais",
-      "prix": 5.0,
+      "prix": 5,
       "allergenes": ["aucun"],
       "src": "./src/FoodPic/67.png",
       "ingredients": ["oranges"],
-      "categorie": "froide"
+      "categorie": "boisson"
     },
     {
       "id": 68,
       "nom": "Soda au citron",
-      "prix": 4.0,
+      "prix": 4,
       "allergenes": ["aucun"],
       "src": "./src/FoodPic/68.png",
       "ingredients": ["eau gazeuse", "sirop de citron"],
-      "categorie": "froide"
+      "categorie": "boisson"
     },
     {
       "id": 69,
@@ -914,25 +906,25 @@
       "allergenes": ["aucun"],
       "src": "./src/FoodPic/69.png",
       "ingredients": ["eau", "citron", "sucre"],
-      "categorie": "froide"
+      "categorie": "boisson"
     },
     {
       "id": 70,
       "nom": "Smoothie aux fruits rouges",
-      "prix": 6.0,
+      "prix": 6,
       "allergenes": ["lait"],
       "src": "./src/FoodPic/70.png",
       "ingredients": ["yaourt", "fraises", "framboises", "myrtilles"],
-      "categorie": "froide"
+      "categorie": "boisson"
     },
     {
       "id": 71,
       "nom": "Chocolat chaud",
-      "prix": 4.0,
+      "prix": 4,
       "allergenes": ["lait"],
       "src": "./src/FoodPic/71.png",
       "ingredients": ["lait", "chocolat noir", "sucre"],
-      "categorie": "chaude"
+      "categorie": "boisson"
     },
     {
       "id": 79,
@@ -941,7 +933,7 @@
       "allergenes": ["sulfites"],
       "src": "./src/FoodPic/79.png",
       "ingredients": ["raisins", "sulfites"],
-      "categorie": "vin"
+      "categorie": "boisson"
     },
     {
       "id": 80,
@@ -950,7 +942,7 @@
       "allergenes": ["sulfites"],
       "src": "./src/FoodPic/80.png",
       "ingredients": ["raisins", "sulfites"],
-      "categorie": "vin"
+      "categorie": "boisson"
     },
     {
       "id": 81,
@@ -959,7 +951,7 @@
       "allergenes": ["sulfites"],
       "src": "./src/FoodPic/81.png",
       "ingredients": ["raisins", "sulfites"],
-      "categorie": "vin"
+      "categorie": "boisson"
     },
     {
       "id": 82,
@@ -968,7 +960,7 @@
       "allergenes": ["gluten"],
       "src": "./src/FoodPic/82.png",
       "ingredients": ["eau", "malt d'orge", "houblon", "levure"],
-      "categorie": "bière"
+      "categorie": "boisson"
     },
     {
       "id": 83,
@@ -977,7 +969,7 @@
       "allergenes": ["gluten"],
       "src": "./src/FoodPic/83.png",
       "ingredients": ["eau", "malt d'orge", "houblon", "levure"],
-      "categorie": "bière"
+      "categorie": "boisson"
     },
     {
       "id": 84,
@@ -986,16 +978,19 @@
       "allergenes": ["gluten"],
       "src": "./src/FoodPic/84.png",
       "ingredients": ["eau", "malt de blé", "houblon", "levure"],
-      "categorie": "bière"
+      "categorie": "boisson"
     },
     {
       "id": 85,
       "nom": "Bière IPA",
-      "prix": 6.0,
+      "prix": 6,
       "allergenes": ["gluten"],
       "src": "./src/FoodPic/85.png",
       "ingredients": ["eau", "malt d'orge", "houblon", "levure"],
-      "categorie": "bière"
+      "categorie": "boisson"
+    },
+    {
+      "id": 86
     }
   ]
 }
