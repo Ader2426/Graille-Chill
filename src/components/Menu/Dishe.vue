@@ -9,7 +9,6 @@ defineProps([
   "shoppingList",
   "removeFromCart",
 ]);
-const isVisible = ref(false);
 </script>
 <template>
   <ul class="p-4 m-2">
@@ -31,7 +30,7 @@ const isVisible = ref(false);
     </button>
     <img :src="plate.src" alt="" class="w-56 h-56 object-cover" />
     <li>{{ plate.nom }}</li>
-    <li>Prix: {{ plate.prix }}</li>
+    <li>Prix: {{ plate.prix }} €</li>
     <div class="flex">
       <p>Allergenes :</p>
       <p v-for="(item, index) in plate.allergenes" :key="index" class="mx-1">

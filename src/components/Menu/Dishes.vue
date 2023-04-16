@@ -1,5 +1,5 @@
 <script setup>
-import { inject, ref, computed } from "vue";
+import { inject, ref, computed, provide } from "vue";
 import BiggerDisheDisplay from "./BiggerDisheDisplay.vue";
 import ShoppinCart from "../ShoppingCart/ShoppinCart.vue";
 import Dishe from "./Dishe.vue";
@@ -11,6 +11,8 @@ const selectedPlate = ref();
 const filteredPlateList = ref([...plateList.value]);
 
 const shoppingList = ref([]);
+
+provide("shoppingList", shoppingList);
 
 const addToCart = (plate) => {
   const index = shoppingList.value.findIndex((item) => item.id === plate.id);
@@ -63,13 +65,26 @@ const filterMenu = (categorie) => {
     }
   }
 };
+
+const totalPrice = computed(() => {
+  return shoppingList.value.reduce((total, item) => {
+    return total + item.quantity * item.prix;
+  }, 0);
+});
+const totalDisheQuantity = computed(() => {
+  return shoppingList.value.reduce((total, item) => {
+    return total + item.quantity;
+  }, 0);
+});
 </script>
 <template>
   <ShoppinCart
-    :shoppinList="shoppingList"
+    :shoppingList="shoppingList"
     :addToCart="addToCart"
     :removeFromCart="removeFromCart"
     :plate="plate"
+    :totalPrice="totalPrice"
+    :totalDisheQuantity="totalDisheQuantity"
   />
   <div class="flex justify-center m-2 p-2 col-span-4">
     <button class="btn primary mx-2" @click="filterMenu('all')">All</button>
