@@ -13,7 +13,7 @@ onMounted(async () => {
 
 
 <template>
-  <div class="grid grid-cols-3 grid-rows-3 items-center justify-items-center">
+  <div class="w-[80%]">
     <Dishes :plateList="plateList" />
   </div>
 </template>

@@ -11,15 +11,15 @@ defineProps([
 ]);
 </script>
 <template>
-  <ul class="p-4 m-2">
-    <button @click="showPlate(plate)">
+  <div class="p-4 m-4 w-[98%]">
+    <button @click="showPlate(plate)" class="absolute">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="currentColor"
-        class="w-6 h-6"
+        class="w-8 h-8 stroke-white fill-orange-700"
       >
         <path
           stroke-linecap="round"
@@ -28,23 +28,81 @@ defineProps([
         />
       </svg>
     </button>
-    <img :src="plate.src" alt="" class="w-56 h-56 object-cover" />
-    <li>{{ plate.nom }}</li>
-    <li>Prix: {{ plate.prix }} €</li>
-    <div class="flex">
-      <p>Allergenes :</p>
-      <p v-for="(item, index) in plate.allergenes" :key="index" class="mx-1">
-        {{ item }}
+    <img
+      :src="plate.src"
+      alt=""
+      class="w-[100%] h-60 object-cover rounded-t-xl"
+    />
+    <div class="w-[100%] h-64 bgNew rounded-b-sm py-2 px-2">
+      <h2 class="text-xl py-4 font-semibold text-test">{{ plate.nom }}</h2>
+      <p class="text-md font-semibold py-2 text-test">
+        Prix: {{ plate.prix }} €
       </p>
-    </div>
 
-    <div v-if="quantity">
-      <button class="btn primary" @click="addToCart(plate)">+</button>
-      <p>{{ quantity }}</p>
-      <button class="btn primary" @click="removeFromCart(plate)">-</button>
+      <div class="flex">
+        <p class="text-md text-test">Allergenes :</p>
+        <p
+          v-for="(item, index) in plate.allergenes"
+          :key="index"
+          class="px-1 text-primary font-bold"
+        >
+          {{ item }}
+        </p>
+      </div>
+
+      <div
+        v-if="quantity"
+        class="flex justify-end items-center h-28 transition-all ease-in-out duration-300"
+      >
+        <button class="primary mx-4 p-1 rounded-md" @click="addToCart(plate)">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-4 h-4 stroke-white"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 6v12m6-6H6"
+            />
+          </svg>
+        </button>
+        <p class="font-semibold text-lg w-3">{{ quantity }}</p>
+        <button
+          class="primary p-1 mx-4 rounded-md"
+          @click="removeFromCart(plate)"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-4 h-4 stroke-white"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 12h-15"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div v-else class="text-right px-2 mt-4">
+        <button
+          @click="addToCart(plate)"
+          class="py-2 px-4 rounded-md primary text-emerald-100 mt-6 font-semibold transition ease-in-out delay-100 hover:scale-110 duration-300"
+        >
+          Ajouter
+        </button>
+      </div>
     </div>
-    <div v-else>
-      <button @click="addToCart(plate)" class="btn primary">Ajouter</button>
-    </div>
-  </ul>
+  </div>
 </template>
+
+<style>
+</style>

@@ -988,9 +988,6 @@
       "src": "./src/FoodPic/85.png",
       "ingredients": ["eau", "malt d'orge", "houblon", "levure"],
       "categorie": "boisson"
-    },
-    {
-      "id": 86
     }
   ]
 }
