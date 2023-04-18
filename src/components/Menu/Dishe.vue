@@ -11,7 +11,7 @@ defineProps([
 ]);
 </script>
 <template>
-  <div class="p-4 m-4 w-[98%]">
+  <div class="p-2 m-4 w-[100%]">
     <button @click="showPlate(plate)" class="absolute">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +33,7 @@ defineProps([
       alt=""
       class="w-[100%] h-60 object-cover rounded-t-xl"
     />
-    <div class="w-[100%] h-54 bgNew rounded-md p-4 shadow-lg">
+    <div class="w-[100%] h-56 bgNew rounded-md p-4 shadow-lg">
       <h2 class="text-xl py-4 text-test font-medium oswald">
         {{ plate.nom }}
       </h2>

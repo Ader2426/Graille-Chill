@@ -3,7 +3,7 @@ import Carousel from "./Carousel.vue";
 </script>
 
 <template>
-  <div class="flex-col justify-center items-center w-[95vw] mx-auto">
+  <div class="flex-col justify-center items-center w-[95vw] mx-auto home">
     <header class="flex h-screen">
       <section class="w-1/2 ml-12 flex-col flex justify-center items-center">
         <img src="../Assets/Img/logo.png" alt="logo" class="mt-20" />

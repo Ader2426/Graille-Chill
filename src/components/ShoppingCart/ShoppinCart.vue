@@ -14,7 +14,7 @@ const price = ref(2.99);
 <template>
   <div class="w-screen">
     <div
-      class="primary mx-auto p-4 w-96 fixed right-6 mt-12 rounded-md h-96 overflow-y-auto test"
+      class="primary mx-auto p-4 w-96 fixed right-6 mt-28 rounded-md h-96 overflow-y-auto test"
     >
       <h2 class="text-lg font-semibold text-emerald-100 my-4">
         Total des plats : {{ totalDisheQuantity }} Pcs

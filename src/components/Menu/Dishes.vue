@@ -109,7 +109,7 @@ const totalDisheQuantity = computed(() => {
     :totalDisheQuantity="totalDisheQuantity"
   />
 
-  <div class="flex justify-center m-12 p-2 col-span-4">
+  <div class="flex justify-start m-12 pl-12">
     <button
       class="py-2 px-4 rounded-xl mx-2 text-lg tracking-widest shadow-md myBtn hover:bg-orange-600 hover:text-white hover:border-white hover:rounded-xl transition-all ease-in-out duration-300"
       @click="filterMenu('all')"
@@ -147,7 +147,7 @@ const totalDisheQuantity = computed(() => {
       Boisson
     </button>
   </div>
-  <div class="grid grid-cols-3 justify-items-center m-4 h-screen w-[85%]">
+  <div class="grid grid-cols-3 w-[68%]">
     <Dishe
       v-for="plate in filteredPlateList"
       :key="plate.id"

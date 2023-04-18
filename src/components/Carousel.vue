@@ -30,12 +30,12 @@ export default {
   data() {
     return {
       carouselImages: [
-        { src: "../../public/Carousel/carousel4.png" },
-        { src: "../../public/Carousel/carousel1.png" },
-        { src: "../../public/Carousel/carousel2.png" },
-        { src: "../../public/Carousel/carousel3.png" },
-        { src: "../../public/Carousel/carousel7.png" },
-        { src: "../../public/Carousel/carousel8.png" },
+        { src: "/Carousel/carousel4.png" },
+        { src: "/Carousel/carousel1.png" },
+        { src: "/Carousel/carousel2.png" },
+        { src: "/Carousel/carousel3.png" },
+        { src: "/Carousel/carousel7.png" },
+        { src: "/Carousel/carousel8.png" },
       ],
       currentIndex: 0,
       translate: 0,
@@ -74,6 +74,7 @@ export default {
   position: relative;
   height: 450px;
   min-width: 500px;
+  overflow: hidden;
 }
 
 .carousel-slide {

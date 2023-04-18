@@ -85,12 +85,15 @@
         </div>
       </div>
     </form>
+    <div class="flex flex-col justify-center items-center">
+      <h2 class="font-bold text-xl mt-10">Travailler chez nous</h2>
+      <p class="pt-10 pb-10 w-[500px] text-center">
+        Vous pouvez envoyer votre candidature spontanée par e-mail ou bien venir
+        déposer votre curriculum vitae ainsi que votre lettre de motivation en
+        personne.
+      </p>
+    </div>
 
-    <!-- <p>{{ nom }}</p>
-    <p>{{ prenom }}</p>
-    <p>{{ telephone }}</p>
-    <p>{{ email }}</p>
-    <p>{{ message }}</p> -->
     <p v-if="messageError">{{ messageError }}</p>
   </div>
 </template>

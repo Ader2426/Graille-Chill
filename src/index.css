@@ -151,3 +151,16 @@ font-family: 'Roboto Mono', monospace; */
   @apply w-full  border-2;
   @apply custom-text-area-default;
 }
+
+.footerListTitle {
+  text-align: center;
+  font-family: "Osvald" sans-serif;
+  color: #1c3144;
+  font-weight: 800;
+}
+.footerListItem {
+  text-align: center;
+  font-family: "Osvald" sans-serif;
+  color: #1c3144;
+  font-weight: 300;
+}

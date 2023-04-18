@@ -1,6 +1,8 @@
 <script setup >
 import { onMounted, ref, computed, provide } from "vue";
 import Dishes from "./components/Menu/Dishes.vue";
+import Navbar from "./components/NavBar/Navbar.vue";
+import Footer from "./components/Footer.vue";
 
 const plateList = ref([]);
 provide("plateList", plateList);
@@ -12,10 +14,9 @@ onMounted(async () => {
 </script>
 
 
-<template>
-  <div class="w-[80%]">
-    <Dishes :plateList="plateList" />
-  </div>
+<template >
+  <Navbar />
+  <Footer />
 </template>
 
 
