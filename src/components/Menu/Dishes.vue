@@ -1,4 +1,4 @@
-div<script setup>
+<script setup>
 import { inject, ref, computed, provide } from "vue";
 import BiggerDisheDisplay from "./BiggerDisheDisplay.vue";
 import ShoppinCart from "../ShoppingCart/ShoppinCart.vue";
@@ -15,8 +15,6 @@ const shoppingList = ref([]);
 const currentIndex = ref();
 
 provide("shoppingList", shoppingList);
-
-const comment = ref("");
 
 const addToCart = (plate) => {
   const index = shoppingList.value.findIndex((item) => item.id === plate.id);
@@ -113,30 +111,39 @@ const totalDisheQuantity = computed(() => {
 
   <div class="flex justify-center m-12 p-2 col-span-4">
     <button
-      class="border-4 border-orange-700 py-1 px-4 rounded-md mx-2 text-lg myBtn hover:bg-orange-600 hover:text-white hover:border-white"
+      class="py-2 px-4 rounded-xl mx-2 text-lg tracking-widest shadow-md myBtn hover:bg-orange-600 hover:text-white hover:border-white hover:rounded-xl transition-all ease-in-out duration-300"
       @click="filterMenu('all')"
     >
       All
     </button>
     <button
-      class="btn primary text-white mx-2"
+      class="py-2 px-4 rounded-xl mx-2 text-lg tracking-widest shadow-md myBtn hover:bg-orange-600 hover:text-white hover:border-white hover:rounded-xl transition-all ease-in-out duration-300"
       @click="filterMenu('végétarien')"
     >
       Vegetarien
     </button>
-    <button class="btn primary mx-2" @click="filterMenu('poisson')">
+    <button
+      class="py-2 px-4 rounded-xl mx-2 text-lg myBtn shadow-md tracking-widest hover:bg-orange-600 hover:text-white hover:border-white hover:rounded-xl transition-all ease-in-out duration-300"
+      @click="filterMenu('poisson')"
+    >
       Poisson
     </button>
     <button
-      class="btn primary mx-2 menuBtn text-white"
+      class="py-2 px-6 rounded-xl mx-2 text-lg myBtn shadow-md tracking-widest hover:bg-orange-600 hover:text-white hover:border-white hover:rounded-xl transition-all ease-in-out duration-300"
       @click="filterMenu('vegan')"
     >
       Vegan
     </button>
-    <button class="btn primary mx-2 button-81" @click="filterMenu('viande')">
+    <button
+      class="py-2 px-4 rounded-xl shadow-md mx-2 text-lg myBtn tracking-widest hover:bg-orange-600 hover:text-white hover:border-white hover:rounded-xl transition-all ease-in-out duration-300"
+      @click="filterMenu('viande')"
+    >
       Viande
     </button>
-    <button class="btn primary mx-2" @click="filterMenu('boisson')">
+    <button
+      class="py-2 px-4 rounded-xl mx-2 text-lg myBtn shadow-md tracking-widest hover:bg-orange-600 hover:text-white hover:border-white hover:rounded-xl transition-all ease-in-out duration-300"
+      @click="filterMenu('boisson')"
+    >
       Boisson
     </button>
   </div>

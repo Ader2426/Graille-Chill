@@ -13,7 +13,9 @@ const price = ref(2.99);
 
 <template>
   <div class="w-screen">
-    <div class="primary mx-auto p-4 w-96 fixed right-6 mt-12 rounded-md h-96">
+    <div
+      class="primary mx-auto p-4 w-96 fixed right-6 mt-12 rounded-md h-96 overflow-y-auto test"
+    >
       <h2 class="text-lg font-semibold text-emerald-100 my-4">
         Total des plats : {{ totalDisheQuantity }} Pcs
       </h2>
@@ -78,3 +80,9 @@ const price = ref(2.99);
     </div>
   </div>
 </template>
+
+<style>
+.test {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.13) 0px 6px 6px;
+}
+</style>

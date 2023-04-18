@@ -33,26 +33,25 @@ defineProps([
       alt=""
       class="w-[100%] h-60 object-cover rounded-t-xl"
     />
-    <div class="w-[100%] h-64 bgNew rounded-b-sm py-2 px-2">
-      <h2 class="text-xl py-4 font-semibold text-test">{{ plate.nom }}</h2>
+    <div class="w-[100%] h-54 bgNew rounded-md p-4 shadow-lg">
+      <h2 class="text-xl py-4 text-test font-medium oswald">
+        {{ plate.nom }}
+      </h2>
+
       <p class="text-md font-semibold py-2 text-test">
         Prix: {{ plate.prix }} €
       </p>
 
       <div class="flex">
-        <p class="text-md text-test">Allergenes :</p>
-        <p
-          v-for="(item, index) in plate.allergenes"
-          :key="index"
-          class="px-1 text-primary font-bold"
-        >
-          {{ item }}
+        <p class="text-sm text-test">Allergénes :</p>
+        <p class="px-1 text-primary text-sm font-bold">
+          {{ plate.allergenes.join(" , ") }}
         </p>
       </div>
 
       <div
         v-if="quantity"
-        class="flex justify-end items-center h-28 transition-all ease-in-out duration-300"
+        class="flex justify-end items-center h-14 transition-all ease-in-out duration-300"
       >
         <button class="primary mx-4 p-1 rounded-md" @click="addToCart(plate)">
           <svg
@@ -95,7 +94,7 @@ defineProps([
       <div v-else class="text-right px-2 mt-4">
         <button
           @click="addToCart(plate)"
-          class="py-2 px-4 rounded-md primary text-emerald-100 mt-6 font-semibold transition ease-in-out delay-100 hover:scale-110 duration-300"
+          class="py-2 px-4 rounded-md primary text-emerald-100 font-semibold transition ease-in-out delay-100 hover:scale-110 duration-300"
         >
           Ajouter
         </button>

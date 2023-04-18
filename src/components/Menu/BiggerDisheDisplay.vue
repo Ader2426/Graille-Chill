@@ -14,7 +14,7 @@ defineProps([
 </script>
 <template>
   <div
-    class="h-[600px] w-[1100px] bgNew fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-4 rounded-md"
+    class="h-[600px] w-[1100px] bgNew fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-4 rounded-md shadow-md drop-shadow-xl"
   >
     <button @click="exitFunction()">
       <svg
