@@ -85,7 +85,7 @@ defineProps([
     </button>
     <div class="text-right">
       <button
-        class="menuBtn py-2 px-4 rounded-lg text-emerald-100 w-64"
+        class="menuBtn py-3 px-4 rounded-lg text-xl tracking-widest text-white w-64 hover:scale-105 duration-800 ease-in-out transition-all"
         @click="addToCart(plate), exitFunction()"
       >
         Ajouter

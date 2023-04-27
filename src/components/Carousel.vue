@@ -1,8 +1,8 @@
 <template>
   <div class="relative h-screen flex justify-center items-center">
-    <div class="carousel-container">
+    <div class="carousel-container rounded-md">
       <div
-        class="carousel-slide"
+        class="carousel-slide transition-all ease-out duration-500 delay-300"
         :style="{ transform: 'translateX(' + translate + '%)' }"
       >
         <div
@@ -10,16 +10,8 @@
           :key="index"
           class="carousel-image"
         >
-          <img :src="image.src" alt="Carousel Image" class="h-350" />
+          <img :src="image.src" alt="Carousel Image" class="my-4 mx-3" />
         </div>
-      </div>
-      <div
-        class="carousel-buttons absolute bottom-0 left-1/2 transform -translate-x-1/2"
-      >
-        <button class="button-of-carousel" @click="prevSlide">
-          &lt Précédent
-        </button>
-        <button class="button-of-carousel" @click="nextSlide">Suivant ></button>
       </div>
     </div>
   </div>
@@ -36,19 +28,24 @@ export default {
         { src: "/Carousel/carousel3.png" },
         { src: "/Carousel/carousel7.png" },
         { src: "/Carousel/carousel8.png" },
+        { src: "/Carousel/carousel1.png" },
+        { src: "/Carousel/carousel4.png" },
       ],
       currentIndex: 0,
       translate: 0,
+      slideWidth: 40,
+      numImages: 12,
+      containerWidth: 0,
     };
   },
   methods: {
     prevSlide() {
       if (this.currentIndex === 0) {
         this.currentIndex = this.carouselImages.length - 1;
-        this.translate = -100 * this.currentIndex - 50;
+        this.translate = -(this.slideWidth * (this.currentIndex + 1));
       } else {
         this.currentIndex--;
-        this.translate += 100;
+        this.translate += this.slideWidth;
       }
     },
     nextSlide() {
@@ -57,14 +54,22 @@ export default {
         this.translate = 0;
       } else {
         this.currentIndex++;
-        this.translate -= 100;
+        this.translate -= this.slideWidth;
       }
+    },
+    updateContainerWidth() {
+      this.containerWidth = this.$el.offsetWidth;
     },
   },
   mounted() {
     setInterval(() => {
       this.nextSlide();
     }, 3000);
+    this.updateContainerWidth();
+    window.addEventListener("resize", this.updateContainerWidth);
+  },
+  beforeDestroy() {
+    window.removeEventListener("resize", this.updateContainerWidth);
   },
 };
 </script>
@@ -72,24 +77,38 @@ export default {
 <style scoped>
 .carousel-container {
   position: relative;
-  height: 450px;
-  min-width: 500px;
+  height: auto;
+
   overflow: hidden;
+
+  background: #1c3144fa;
 }
 
 .carousel-slide {
   display: flex;
   height: 100%;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 1.3s;
 }
 
 .carousel-image {
-  flex: 1 0 100%;
+  flex: 1 0 40%;
 }
 
 .carousel-image img {
-  width: auto;
-  height: 350px;
-  margin: auto;
+  border-radius: 10px;
+  height: 300px;
+  width: 400px;
+}
+
+@media (max-width: 639px) {
+  .carousel-image {
+    flex: 1 0 100%;
+  }
+
+  .carousel-image img {
+    height: 200px;
+    width: 300px;
+  }
 }
 </style>
+

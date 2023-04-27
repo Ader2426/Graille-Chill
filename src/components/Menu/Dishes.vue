@@ -1,5 +1,5 @@
 <script setup>
-import { inject, ref, computed, provide } from "vue";
+import { inject, ref, computed } from "vue";
 import BiggerDisheDisplay from "./BiggerDisheDisplay.vue";
 import ShoppinCart from "../ShoppingCart/ShoppinCart.vue";
 import Dishe from "./Dishe.vue";
@@ -10,11 +10,7 @@ const selectedPlate = ref();
 
 const filteredPlateList = ref([...plateList.value]);
 
-const shoppingList = ref([]);
-
 const currentIndex = ref();
-
-provide("shoppingList", shoppingList);
 
 const addToCart = (plate) => {
   const index = shoppingList.value.findIndex((item) => item.id === plate.id);
@@ -93,55 +89,49 @@ const totalPrice = computed(() => {
   }, 0);
 });
 
-const totalDisheQuantity = computed(() => {
-  return shoppingList.value.reduce((total, item) => {
-    return total + item.quantity;
-  }, 0);
-});
+const shoppingList = inject("shoppingList");
 </script>
 <template>
   <ShoppinCart
-    :shoppingList="shoppingList"
     :addToCart="addToCart"
     :removeFromCart="removeFromCart"
     :plate="plate"
     :totalPrice="totalPrice"
-    :totalDisheQuantity="totalDisheQuantity"
   />
 
-  <div class="flex justify-start m-12 pl-12">
+  <div class="flex justify-start p-16 m-8">
     <button
-      class="py-2 px-4 rounded-xl mx-2 text-lg tracking-widest shadow-md myBtn hover:bg-orange-600 hover:text-white hover:border-white hover:rounded-xl transition-all ease-in-out duration-300"
+      class="py-2 px-4 rounded-xl mx-2 text-lg tracking-widest shadow-md myBtn hover:bg-orange-600 hover:text-white hover:border-white hover:rounded-xl transition-all ease-in-out duration-800 delay-100"
       @click="filterMenu('all')"
     >
       All
     </button>
     <button
-      class="py-2 px-4 rounded-xl mx-2 text-lg tracking-widest shadow-md myBtn hover:bg-orange-600 hover:text-white hover:border-white hover:rounded-xl transition-all ease-in-out duration-300"
+      class="py-2 px-4 rounded-xl mx-2 text-lg tracking-widest shadow-md myBtn hover:bg-orange-600 hover:text-white hover:border-white hover:rounded-xl transition-all ease-in-out duration-800 delay-100"
       @click="filterMenu('végétarien')"
     >
       Vegetarien
     </button>
     <button
-      class="py-2 px-4 rounded-xl mx-2 text-lg myBtn shadow-md tracking-widest hover:bg-orange-600 hover:text-white hover:border-white hover:rounded-xl transition-all ease-in-out duration-300"
+      class="py-2 px-4 rounded-xl mx-2 text-lg myBtn shadow-md tracking-widest hover:bg-orange-600 hover:text-white hover:border-white hover:rounded-xl transition-all ease-in-out duration-800 delay-100"
       @click="filterMenu('poisson')"
     >
       Poisson
     </button>
     <button
-      class="py-2 px-6 rounded-xl mx-2 text-lg myBtn shadow-md tracking-widest hover:bg-orange-600 hover:text-white hover:border-white hover:rounded-xl transition-all ease-in-out duration-300"
+      class="py-2 px-6 rounded-xl mx-2 text-lg myBtn shadow-md tracking-widest hover:bg-orange-600 hover:text-white hover:border-white hover:rounded-xl transition-all ease-in-out duration-800 delay-100"
       @click="filterMenu('vegan')"
     >
       Vegan
     </button>
     <button
-      class="py-2 px-4 rounded-xl shadow-md mx-2 text-lg myBtn tracking-widest hover:bg-orange-600 hover:text-white hover:border-white hover:rounded-xl transition-all ease-in-out duration-300"
+      class="py-2 px-4 rounded-xl shadow-md mx-2 text-lg myBtn tracking-widest hover:bg-orange-600 hover:text-white hover:border-white hover:rounded-xl transition-all ease-in-out duration-800 delay-100"
       @click="filterMenu('viande')"
     >
       Viande
     </button>
     <button
-      class="py-2 px-4 rounded-xl mx-2 text-lg myBtn shadow-md tracking-widest hover:bg-orange-600 hover:text-white hover:border-white hover:rounded-xl transition-all ease-in-out duration-300"
+      class="py-2 px-4 rounded-xl mx-2 text-lg myBtn shadow-md tracking-widest hover:bg-orange-600 hover:text-white hover:border-white hover:rounded-xl transition-all ease-in-out duration-800 delay-100"
       @click="filterMenu('boisson')"
     >
       Boisson

@@ -3,7 +3,7 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@500&family=Lato:wght@100;300&family=Oswald&family=Roboto+Mono:wght@200&display=swap");
 
-/* font-family: 'Karla', sans-serif;
+/* 
 font-family: 'Lato', sans-serif;
 font-family: 'Oswald', sans-serif;
 font-family: 'Roboto Mono', monospace; */
@@ -40,10 +40,10 @@ font-family: 'Roboto Mono', monospace; */
 }
 
 .form-control.input label {
-  @apply block text-sm font-medium text-gray-700;
+  @apply block text-sm  font-semibold text-gray-700;
 }
 .form-control.input input {
-  @apply mt-1 focus:ring-emerald-500 focus:border-emerald-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md;
+  @apply mt-1 focus:ring-orange-700 focus:border-emerald-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md;
 }
 .form-control.input input:disabled {
   @apply bg-gray-300 text-gray-500;
@@ -61,7 +61,7 @@ font-family: 'Roboto Mono', monospace; */
 }
 
 .form-control.select label {
-  @apply block text-sm font-medium text-gray-700;
+  @apply block text-sm font-semibold text-gray-700;
 }
 .form-control.select select {
   @apply mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500 sm:text-sm;
@@ -102,6 +102,9 @@ font-family: 'Roboto Mono', monospace; */
 }
 .text-primary {
   color: #e94e1b;
+}
+.myShop {
+  background-color: #1c3144;
 }
 .text-test {
   color: #1c3144;
@@ -148,7 +151,7 @@ font-family: 'Roboto Mono', monospace; */
   border-color: #e94e1b;
 }
 .text-area-default {
-  @apply w-full  border-2;
+  @apply w-full;
   @apply custom-text-area-default;
 }
 
@@ -163,4 +166,9 @@ font-family: 'Roboto Mono', monospace; */
   font-family: "Osvald" sans-serif;
   color: #1c3144;
   font-weight: 300;
+}
+h1,
+h2 {
+  color: #1c3144;
+  font-family: "Roboto Mono", monospace;
 }

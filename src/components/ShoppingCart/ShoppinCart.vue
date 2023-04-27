@@ -1,31 +1,32 @@
 <script setup>
-import { defineProps, ref, inject } from "vue";
-defineProps([
-  "addToCart",
-  "shoppingList",
-  "removeFromCart",
-  "plate",
-  "totalPrice",
-  "totalDisheQuantity",
-]);
+import { defineProps, ref, inject, provide } from "vue";
+
+defineProps(["addToCart", "removeFromCart", "plate", "totalPrice"]);
 const price = ref(2.99);
+const totalDisheQuantity = inject("totalDisheQuantity");
+const shoppingList = inject("shoppingList");
+const sendToPayment = inject("sendToPayment");
+const totalByDishe = inject("totalByDishe");
+provide("price", price);
 </script>
 
 <template>
   <div class="w-screen">
     <div
-      class="primary mx-auto p-4 w-96 fixed right-6 mt-28 rounded-md h-96 overflow-y-auto test"
+      class="primary mx-auto p-4 w-96 fixed right-6 mt-28 rounded-md h-[450px] overflow-y-auto test"
     >
-      <h2 class="text-lg font-semibold text-emerald-100 my-4">
-        Total des plats : {{ totalDisheQuantity }} Pcs
+      <h2 class="text-lg font-semibold text-emerald-100 my-6 pb-2 p-2">
+        Total des plats : {{ totalDisheQuantity }} Plats
       </h2>
       <div
         v-for="item in shoppingList"
         :key="item.id"
-        class="border-2 py-4 px-2 flex justify-between items-center rounded-md bgNew my-2"
+        class="border-2 py-4 px-2 flex justify-between items-center rounded-md bgNew my-2 delay-200 ease-in-out duration-300"
       >
         <div class="">
-          <h2 class="text-md font-md">{{ item.nom }}</h2>
+          <h2 class="text-md font-md">
+            {{ item.nom }}
+          </h2>
           <h4 class="font-semibold">Prix :{{ item.prix }} €</h4>
         </div>
 
@@ -77,6 +78,15 @@ const price = ref(2.99);
           Frais de livraison : {{ totalPrice > 35 ? "Gratuit" : `${price} €` }}
         </p>
       </div>
+      <div class="text-right" v-if="totalPrice">
+        <button
+          type="submit"
+          class="custom-btn btn-15 menuBtn font-semibold p-2 px-4"
+          @click="sendToPayment()"
+        >
+          Continuez
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -84,5 +94,47 @@ const price = ref(2.99);
 <style>
 .test {
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.13) 0px 6px 6px;
+}
+.custom-btn {
+  color: #fff;
+  border-radius: 5px;
+
+  margin: 1rem;
+  font-family: "Lato", sans-serif;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.9s ease;
+  position: relative;
+  display: inline-block;
+
+  outline: none;
+}
+.btn-15 {
+  background: #b621fe;
+  border: none;
+  z-index: 1;
+}
+.btn-15:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: rgba(205, 56, 56, 0.806);
+  border-radius: 5px;
+
+  transition: all 0.3s ease;
+}
+.btn-15:hover {
+  color: #fff;
+}
+.btn-15:hover:after {
+  left: 0;
+  width: 100%;
+}
+.btn-15:active {
+  top: 2px;
 }
 </style>

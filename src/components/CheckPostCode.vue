@@ -1,17 +1,22 @@
 <template>
-  <div class="flex flex-col items-center">
-    <label for="postalcode"
-      >Vérifiez si la livraison est possible chez vous, entrez votre code
-      postale (4 chiffres)</label
+  <div class="form-control input">
+    <label for="postalcode" class="text-test"
+      >Vérifiez si la livraison est possible chez vous</label
     >
-    <input type="number" id="postalcode" v-model="postalcode" class="my-2" />
+    <input
+      type="number"
+      id="postalcode"
+      v-model="postalcode"
+      placeholder="6000"
+      class="my-2 rounded-md"
+    />
     <button
-      @click="checkPostalCode"
-      class="bg-orange-500 text-white px-4 py-2 rounded"
+      @click.prevent="checkPostalCode"
+      class="menuBtn text-white px-4 py-1 rounded"
     >
       Vérifier
     </button>
-    <p class="mt-2">{{ message }}</p>
+    <p class="pt-1">{{ message }}</p>
   </div>
 </template>
 

@@ -53,23 +53,6 @@ defineProps([
         v-if="quantity"
         class="flex justify-end items-center h-14 transition-all ease-in-out duration-300"
       >
-        <button class="primary mx-4 p-1 rounded-md" @click="addToCart(plate)">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-4 h-4 stroke-white"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M12 6v12m6-6H6"
-            />
-          </svg>
-        </button>
-        <p class="font-semibold text-lg w-3">{{ quantity }}</p>
         <button
           class="primary p-1 mx-4 rounded-md"
           @click="removeFromCart(plate)"
@@ -89,12 +72,29 @@ defineProps([
             />
           </svg>
         </button>
+        <p class="font-semibold text-lg w-3">{{ quantity }}</p>
+        <button class="primary mx-4 p-1 rounded-md" @click="addToCart(plate)">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-4 h-4 stroke-white"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 6v12m6-6H6"
+            />
+          </svg>
+        </button>
       </div>
 
       <div v-else class="text-right px-2 mt-4">
         <button
           @click="addToCart(plate)"
-          class="py-2 px-4 rounded-md primary text-emerald-100 font-semibold transition ease-in-out delay-100 hover:scale-110 duration-300"
+          class="py-2 px-4 rounded-md primary text-white font-semibold transition ease-in-out delay-100 hover:scale-110 duration-300"
         >
           Ajouter
         </button>

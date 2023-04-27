@@ -1,32 +1,36 @@
 <template>
   <div class="flex items-center flex-col mt-10">
-    <h1 class="text-center font-bold mt-3 text-3xl">Contactez nous :</h1>
+    <h2
+      class="text-center text-test font-semibold mt-3 text-3xl tracking-widest"
+    >
+      Contactez nous
+    </h2>
     <form class="mt-10" @submit.prevent="submitForm">
-      <div class="flex">
-        <div class="w-1/2 mr-7">
-          <label for="nom">Votre nom:*</label>
-          <br />
-          <input type="text" v-model="nom" class="border-input" required />
+      <div class="flex justify-between">
+        <div class="form-control input label">
+          <label for="nom">Votre nom :*</label>
+
+          <input type="text" v-model="nom" required />
         </div>
-        <div>
-          <label for="prenom">Votre prénom:*</label>
-          <br />
-          <input type="text" v-model="prenom" class="border-input" required />
+        <div class="form-control input label">
+          <label for="prenom">Votre prénom :*</label>
+
+          <input type="text" v-model="prenom" required />
         </div>
       </div>
 
-      <div class="pt-2">
-        <label for="email">Votre adresse mail*</label> <br />
-        <input type="email" v-model="email" class="border-input" required />
+      <div class="form-control input label">
+        <label for="email">Votre adresse mail : *</label>
+        <input type="email" v-model="email" required />
       </div>
-      <div class="pt-2">
+      <div class="form-control input label">
         <label for="telephone"
           >Votre numéro de téléphone fixe ou mobile :*</label
         >
-        <br />
-        <input type="tel" v-model="telephone" class="border-input" required />
+
+        <input type="tel" v-model="telephone" class="" required />
       </div>
-      <div class="pt-2">
+      <div class="form-control textarea label">
         <label for="message">Message :*</label>
         <div class="relative">
           <textarea
@@ -43,42 +47,53 @@
           >
         </div>
         <div class="flex justify-center">
-          <button type="submit" class="button-style-default">Envoyer</button>
+          <button
+            type="submit"
+            class="menuBtn px-6 py-2 m-4 rounded-lg text-white tracking-widest text-lg hover:opacity-90 duration-200 ease-in-out transition-all delay-100"
+          >
+            Envoyer
+          </button>
         </div>
-        <h2 class="text-center font-bold text-xl mt-10">Ou</h2>
-        <div class="flex justify-between">
-          <div class="flex flex-col items-center justify-center mt-8 w-40">
+        <h2 class="text-center font-bold text-2xl my-10">Ou</h2>
+        <div class="flex justify-between gap-6">
+          <div
+            class="flex flex-col items-center justify-center mt-8 w-40 hover:scale-105"
+          >
             <a href="mailto:GrailleAndChill@food.be"
               ><img
                 src="../Assets/Img/emaillogo.png"
                 alt="emaillogo"
                 class="h-20 w-20"
             /></a>
-            <p class="text-sm pt-2">
+            <p class="text-md mt-4 text-test tracking-wider">
               <a href="mailto:GrailleAndChill@food.be"
                 >GrailleAndChill@food.be</a
               >
             </p>
           </div>
-          <div class="flex flex-col items-center justify-center mt-8 w-40">
+          <div
+            class="flex flex-col items-center justify-center mt-8 w-40 hover:scale-105"
+          >
             <a href="tel:+33711223344"
               ><img
                 src="../Assets/Img/phone.png"
                 alt="phonelogo"
                 class="h-20 w-20"
             /></a>
-            <p class="text-sm pt-2">
+            <p class="text-md mt-4 text-test tracking-wider">
               <a href="tel:+33711223344">0400/00-00-00</a>
             </p>
           </div>
-          <div class="flex flex-col items-center justify-center mt-8 w-40">
+          <div
+            class="flex flex-col items-center justify-center mt-8 w-40 hover:scale-105"
+          >
             <a href="https://www.facebook.com/"
               ><img
                 src="../Assets/Img/facebooklogo.png"
                 alt="facebooklogo"
                 class="h-20 w-20"
             /></a>
-            <p class="text-sm pt-2">
+            <p class="text-md mt-4 tracking-wider text-test">
               <a href="https://www.facebook.com/">GrailleAndChill</a>
             </p>
           </div>
@@ -86,8 +101,12 @@
       </div>
     </form>
     <div class="flex flex-col justify-center items-center">
-      <h2 class="font-bold text-xl mt-10">Travailler chez nous</h2>
-      <p class="pt-10 pb-10 w-[500px] text-center">
+      <h2 class="font-bold text-xl my-16 tracking-widest">
+        Travailler chez nous
+      </h2>
+      <p
+        class="my-14 w-[500px] text-center text-test text-lg tracking-widest leading-10"
+      >
         Vous pouvez envoyer votre candidature spontanée par e-mail ou bien venir
         déposer votre curriculum vitae ainsi que votre lettre de motivation en
         personne.
