@@ -77,7 +77,7 @@ const price = ref(2.99);
       <div
         class="form-control flex gap-2 bg-gray-100 rounded-md p-4 tracking-widest justify-between"
       >
-        <p class="text-lg font-semibold">Free de livraison :</p>
+        <p class="text-lg font-semibold">Frais de livraison :</p>
         <p class="text-lg font-semibold">
           {{ totalPrice > 35 ? "Gratuit" : `${price} €` }}
         </p>

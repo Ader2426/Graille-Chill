@@ -147,20 +147,20 @@ const shoppingList = inject("shoppingList");
       :shoppingList="shoppingList"
       :removeFromCart="removeFromCart"
       :quantity="
-        shoppingList.find((item) => item.id === plate.id)?.quantity || 0
+        shoppingList.find((item) => item.id === plate.id)?.quantity || 0 //L'opérateur de chaînage optionnel ?. permet de lire la valeur d'une propriété située profondément dans une chaîne d'objets connectés sans avoir à valider expressément que chaque référence dans la chaîne est valide.
       "
     />
-  </div>
 
-  <BiggerDisheDisplay
-    :addToCart="addToCart"
-    :exitFunction="exitDisheDisplay"
-    :plate="selectedPlate"
-    :currentIndex="currentIndex"
-    :next="goToNextPlate"
-    :prev="goToPreviousPlate"
-    v-if="selectedPlate"
-  />
+    <BiggerDisheDisplay
+      :addToCart="addToCart"
+      :exitFunction="exitDisheDisplay"
+      :plate="selectedPlate"
+      :currentIndex="currentIndex"
+      :next="goToNextPlate"
+      :prev="goToPreviousPlate"
+      v-if="selectedPlate"
+    />
+  </div>
 </template>
 
 

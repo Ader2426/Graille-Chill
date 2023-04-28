@@ -18,7 +18,7 @@ for (let h = 7; h <= 22; h++) {
 
 
 <template>
-  <div class="flex gap-6 items-start mb-2">
+  <div class="flex justify-around mb-2 w-full">
     <CheckPostCode />
 
     <div class="form-control select label">
@@ -39,7 +39,7 @@ for (let h = 7; h <= 22; h++) {
         v-if="selectedHoraire"
         class="text-test transition-all ease-in-out duration-700 delay-300 relative"
       >
-        <p class="transform translate-y-12">
+        <p class="transform translate-y-12 font-mono">
           Vous avez choisi
           {{ selectedHoraire }}
         </p>

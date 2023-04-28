@@ -2,19 +2,16 @@
 <script setup>
 import { inject, ref, provide, computed } from "vue";
 import router from "../../router";
-const selectedOption = ref("");
-const selectedSubOption = ref("");
 import Livraison from "./Livraison.vue";
 
+const selectedOption = ref("");
+const selectedSubOption = ref("");
 const cart = inject("cart");
 const shoppingList = inject("shoppingList");
 const emptyList = inject("emptyList");
 const price = ref(2.99);
 const serviceFee = ref(0.75);
 const isDone = ref(false);
-
-provide("selectedOption", selectedOption.value);
-provide("selectedSubOption", selectedSubOption.value);
 
 const formPayment = ref({
   rueLivraison: "",
@@ -32,6 +29,10 @@ const checkPaymentMethod = (event) => {
   if (selectedOption.value && selectedSubOption.value) {
     isDone.value = false;
   }
+};
+
+const exitPayment = () => {
+  isDone.value = false;
 };
 
 const choosePayment = () => {
@@ -54,7 +55,7 @@ const choosePayment = () => {
         (selectedSubOption.value === "Master Card" && cart.value.totalPrice) ||
         (selectedSubOption.value === "Maestro" && cart.value.totalPrice)
       ) {
-        router.push({ path: "/payment/bill" });
+        router.push("/payment/bill");
         emptyList();
       } else if (selectedSubOption.value === "Cash" && cart.value.totalPrice) {
         router.push("/payment/bill");
@@ -69,7 +70,6 @@ const choosePayment = () => {
 </script>
 
 <template >
-  <router-view :formPayment="formPayment"></router-view>
   <div class="flex flex-row-reverse h-screen">
     <div class="w-1/4 border-2 rounded-t-lg m-4">
       <h1
@@ -99,17 +99,31 @@ const choosePayment = () => {
         <div class="flex items-center justify-between p-2 border-b-2">
           <p>Frais de livraison :</p>
           <p>
-            {{ cart.totalPrice > 35 ? "Gratuit" : `${price} €` }}
+            {{
+              cart.totalPrice > 35
+                ? "Gratuit"
+                : cart.totalPrice < 35
+                ? `€ ${price} `
+                : !cart.totalPrice
+                ? `€ ${0}`
+                : 0
+            }}
           </p>
         </div>
         <div class="flex items-center justify-between p-2 border-b-2">
           <p>Frais de service :</p>
-          <p>€ {{ serviceFee }}</p>
+          <p>€ {{ !cart.totalPrice ? 0 : serviceFee }}</p>
         </div>
         <div class="flex items-center justify-between p-2 border-b-2">
           <p>Montant Total :</p>
-          <p>€ {{ serviceFee + cart.totalPrice }}</p>
+          <p>€ {{ cart.totalPrice ? serviceFee + cart.totalPrice : 0 }}</p>
         </div>
+        <p
+          v-if="!cart.totalPrice"
+          class="text-red-600 font-mono tracking-normal mt-2 indent-2"
+        >
+          Aucun produit selectionner !
+        </p>
       </div>
     </div>
     <div class="m-4 w-3/4 shadow-md rounded-lg p-10 overflow-y-auto mb-6">
@@ -174,7 +188,7 @@ const choosePayment = () => {
           </div>
         </div>
         <div
-          class="border-2 border-light-gray rounded-md text-left my-4 p-4 leading-7 flex justify-between items-center"
+          class="border-2 border-light-gray rounded-md text-left my-4 p-4 leading-7 flex flex-col justify-between items-center"
         >
           <div class="flex flex-col items-center">
             <h2
@@ -196,11 +210,6 @@ const choosePayment = () => {
               </svg>
               Délai de livraison
             </h2>
-
-            <p class="text-gray-500 pl-10">
-              Temps d'arrivée estimé :
-              <span class="text-gray-400 text-md">25min</span>
-            </p>
           </div>
 
           <Livraison />
@@ -226,6 +235,7 @@ const choosePayment = () => {
                 />
               </svg>
             </p>
+
             <label
               @click="isDone = true"
               for="radioDirect"
@@ -279,7 +289,25 @@ const choosePayment = () => {
           v-if="isDone"
           class="h-[450px] w-[650px] bg-white fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-8 rounded-md shadow-md drop-shadow-xl flex flex-col justify-center gap-6"
         >
-          <p class="text-xl font-semibold text-left">Modes de paiment</p>
+          <div class="text-right">
+            <button @click="exitPayment">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+
           <div
             class="inline-flex items-center justify-between border-2 gap-1 text-left hover:bg-gray-100 ease-in-out delay-70 transition-all rounded-lg space-x-8 p-3"
           >
@@ -360,6 +388,24 @@ const choosePayment = () => {
           v-if="selectedOption === 'Paiement à la livraison' && isDone"
           class="h-[450px] w-[650px] bg-white fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-8 rounded-md shadow-md drop-shadow-xl flex flex-col justify-center gap-6"
         >
+          <div class="text-right">
+            <button @click="exitPayment">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
           <div
             class="inline-flex items-center justify-between border-2 gap-1 text-left hover:bg-gray-100 ease-in-out delay-70 transition-all rounded-lg space-x-8 px-3"
           >
@@ -479,6 +525,12 @@ const choosePayment = () => {
             Commander et payer avec
             {{ selectedSubOption }} (€{{ cart.totalPrice }}).
           </button>
+          <p
+            v-if="!cart.totalPrice"
+            class="text-red-600 font-mono mt-4 indent-1"
+          >
+            Veuillez sélectionner un produit avant de procéder au paiement !
+          </p>
         </div>
       </div>
     </div>

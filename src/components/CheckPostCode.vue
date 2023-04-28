@@ -16,7 +16,7 @@
     >
       Vérifier
     </button>
-    <p class="pt-1">{{ message }}</p>
+    <p class="pt-1 font-mono">{{ message }}</p>
   </div>
 </template>
 
@@ -48,7 +48,7 @@ export default {
   methods: {
     checkPostalCode() {
       if (!this.postalcode) {
-        this.message = "Aucun code postal n'a été écrit.";
+        this.message = "Aucun code postal !";
       } else if (this.postalcode.toString().length > 4) {
         this.message = "Le code postal doit comporter 4 chiffres maximum.";
       } else {
